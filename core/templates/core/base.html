@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css">
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row-fluid">
+        {{ include core/navbar.html }}
+        <div class="row">
+          <div class="col-sm-2 left-block">  
+          </div>
+          <div class="col-sm-8">
+            <div class="row">
+              {% block content %}
+              {% endblock %}
+            </div>
+          </div>
+          <div class="col-sm-2 right-block">
+            <a class="nav-link" href="{% url 'product_new' %}"> New product</a>
+            <a class="nav-link" href="{% url 'product_draft_list' %}"> Draft list</a>
+          </div>
+        </div>
+        {{ include core/footer.html }}
+      </div>
+    </div>
+  </body>
+</html>
