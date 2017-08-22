@@ -1,1 +1,16 @@
 {% extends 'core/base.html' %}
+
+{% block content %}
+	{% for product in products %}
+	  <div class="col-sm-4">
+	    <div class="card">
+		    <a href="{% url 'post_detail' pk=post.pk %}">
+		      <img class="card-img-top" src="{{ product.picture }}" alt="Card image cap">
+		      <div class="card-body">
+		        <p class="card-text">{{ product.name }} <small>{{ product.price }}</small></p>
+		      </div>
+			</a>
+	    </div>
+	  </div>
+	{% endfor %}
+{% endblock %}
