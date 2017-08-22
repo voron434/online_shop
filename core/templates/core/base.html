@@ -10,7 +10,7 @@
   <body>
     <div class="container-fluid">
       <div class="row-fluid">
-        {{ include core/navbar.html }}
+        {% include "core/navbar.html" %}
         <div class="row">
           <div class="col-sm-2 left-block">  
           </div>
@@ -21,11 +21,11 @@
             </div>
           </div>
           <div class="col-sm-2 right-block">
-            <a class="nav-link" href="{% url 'product_new' %}"> New product</a>
-            <a class="nav-link" href="{% url 'product_draft_list' %}"> Draft list</a>
+            <a class="nav-link" href="#"> New product</a>
+            <a class="nav-link" href="#"> Draft list</a>
           </div>
         </div>
-        {{ include core/footer.html }}
+        {% include "core/footer.html" %}
       </div>
     </div>
   </body>
