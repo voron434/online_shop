@@ -1,9 +1,9 @@
 <nav class="navbar navbar-dark bg-inverse fixed-top">
   <a class="navbar-brand" href="/" style="color:white">Company Logo</a>
   <a class="nav-link" href="#" style="color:salmon">Sale</a>
-  <a class="nav-link" href="#" style="color:skyblue">Mans</a>
-  <a class="nav-link" href="#" style="color:skyblue">Womens</a>
-  <a class="nav-link" href="#" style="color:skyblue">Kids</a>
+  <a class="nav-link" href="{% url 'filter_clothes_mens' %}" style="color:skyblue">Mans</a>
+  <a class="nav-link" href="{% url 'filter_clothes_womens' %}" style="color:skyblue">Womens</a>
+  <a class="nav-link" href="{% url 'filter_clothes_child' %}" style="color:skyblue">Kids</a>
   <a class="nav-link" href="#" style="color:white">Contact Us</a>
   <form class="form-inline navbar-form pull-right">
     <div class="input-append">

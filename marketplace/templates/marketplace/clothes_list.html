@@ -10,7 +10,7 @@
 					<p class="card-text">{{ clothes_sample.price}} $</p>
 					<p class="card-text"><small class="text-muted">Some added info</small></p>
 					<div class="btn-group" role="group" aria-label="First group" style="position: absolute; bottom: 10px">
-						<a href="#" class="btn btn-outline-primary float-left">Publish</a>
+						<a href="{% url 'clothes_publish' pk=clothes_sample.pk %}" class="btn btn-outline-primary float-left">Publish</a>
 						<a href="#" class="btn btn-primary float-left"><i class="fa fa-cart-arrow-down"></i> To cart</a>
 					</div>
 				</div>
