@@ -1,1 +1,12 @@
 {% extends 'core/base.html' %}
+
+{% block content %}
+  <div class="col-sm-4">
+    <div class="card">
+      <img class="card-img-top" src={{ clothes.picture }} alt="Card image cap">
+      <div class="card-body">
+        <p class="card-text">{{ clothes.name }} <small>{{ clothes.price }}</small></p>
+      </div>
+    </div>
+  </div>
+{% endblock %}

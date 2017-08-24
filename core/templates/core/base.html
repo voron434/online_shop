@@ -1,3 +1,4 @@
+{% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -5,24 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
 
   <body>
     <div class="container-fluid">
       <div class="row-fluid">
         {% include "core/navbar.html" %}
-        <div class="row">
+        <div class="row" style="margin-top: 6%">
           <div class="col-sm-2 left-block">  
           </div>
           <div class="col-sm-8">
             <div class="row">
-              {% block content %}
-              {% endblock %}
+              <div class="card-group">
+                {% block content %}
+                {% endblock %}
+              </div>
             </div>
           </div>
           <div class="col-sm-2 right-block">
             <a class="nav-link" href="{% url 'clothes_new' %}"> New product</a>
-            <a class="nav-link" href="#"> Draft list</a>
+            <a class="nav-link" href="{% url 'clothes_draft_list' %}"> Draft list</a>
           </div>
         </div>
         {% include "core/footer.html" %}
